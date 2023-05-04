@@ -24,7 +24,7 @@ export function LinkedInIcon() {
   );
 }
 
-export function GitHubIcon({ className }) {
+export function GitHubIcon({ className = "" }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
