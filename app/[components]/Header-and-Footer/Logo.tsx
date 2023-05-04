@@ -7,10 +7,10 @@ const MotionLink = motion(Link);
 
 export default function Logo() {
   return (
-    <div className="flex items-center justify-center mt-2">
+    <div className="flex items-center justify-center mt-2 lg:mt-1">
       <MotionLink
         href="/"
-        className="w-16 h-16 bg-dark text-light 
+        className="w-16 h-16 lg:w-14 lg:h-14  bg-dark text-light 
         flex items-center justify-center rounded-full text-2xl font-bold
         border border-solid border-transparent dark:border-light"
         whileHover={{

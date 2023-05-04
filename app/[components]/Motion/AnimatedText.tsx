@@ -5,7 +5,6 @@
 
 import { motion } from "framer-motion";
 
-// Framer Motion Variants
 const quote = {
   initial: {
     opacity: 1,
@@ -13,8 +12,8 @@ const quote = {
   animate: {
     opacity: 1,
     transition: {
-      delay: 0.5,
       staggerChildren: 0.08,
+      delayChildren: 0.5,
     },
   },
 };
@@ -33,24 +32,9 @@ const singleWord = {
   },
 };
 
-const singleLetter = {
-  initial: {
-    opacity: 0,
-    y: 50,
-  },
-  animate: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 1,
-      ease: "linear",
-    },
-  },
-};
-
 export default function AnimatedText({
   text,
-  className = "",
+  className,
 }: {
   text: string;
   className?: string;
@@ -58,34 +42,23 @@ export default function AnimatedText({
   return (
     <div
       className="w-full mx-auto py-2 items-center justify-center text-center overflow-hidden
-     "
+     sm:p-0"
     >
       <motion.h1
-        className={`w-full text-dark font-bold capitalize text-8xl dark:text-light ${className}`}
+        className={`${className} w-full text-dark dark:text-light font-bold capitalize text-8xl
+        lg:text-6xl md:text-5xl `}
         // telling the variants to use initial from quote, and animate from quote
         variants={quote}
-        // refering to the initial and animate above in quote
         initial="initial"
         animate="animate"
       >
-        {/* children/staggerChildren from the quote Variant */}
         {text.split(" ").map((word, index) => (
           <motion.span
             key={word + "-" + index}
-            className=" inline-block"
+            className=" inline-block dark:bg-gradient-to-r from-blue-400 via-purple-500 to-orange-500 dark:text-transparent bg-clip-text animate-gradient-xy"
             variants={singleWord}
           >
-            {/* non breaking space */}
-            {word.split("").map((letter, index) => (
-              <motion.span
-                key={letter + "-" + index}
-                className="inline-block "
-                variants={singleLetter}
-              >
-                {letter}
-              </motion.span>
-            ))}
-            &nbsp;
+            {word}&nbsp;
           </motion.span>
         ))}
       </motion.h1>

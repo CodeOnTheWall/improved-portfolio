@@ -1,8 +1,8 @@
 import "./globals.css";
 import { montserrat } from "./fonts";
-import NavBar from "@/components/Header-and-Footer/NavBar";
-import Footer from "@/components/Header-and-Footer/Footer";
-import HireMe from "@/components/Header-and-Footer/HireMe";
+import NavBar from "./[components]/Header-and-Footer/NavBar";
+import Footer from "./[components]/Header-and-Footer/Footer";
+import HireMe from "./[components]/Header-and-Footer/HireMe";
 
 import Script from "next/script";
 

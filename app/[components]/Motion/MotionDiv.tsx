@@ -3,7 +3,7 @@
 import { motion, MotionProps } from "framer-motion";
 
 interface Props extends MotionProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   className?: string;
 }
 

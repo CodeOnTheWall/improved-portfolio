@@ -6,8 +6,8 @@ import { motion, MotionProps } from "framer-motion";
 interface Props extends MotionProps {
   children: string;
   className?: string;
-  x: any;
-  y: any;
+  x: string;
+  y: string;
 }
 
 export default function MotionSkill({
@@ -24,8 +24,10 @@ export default function MotionSkill({
       whileTap={whileTap}
       initial={{ x: 0, y: 0 }}
       whileInView={{ x: x, y: y, transition: { duration: 1.5 } }}
-      className={`${className} flex items-center justify-center absolute rounded-full font-semibold bg-dark text-light py-3 px-6 shadow-dark
-       dark:text-dark dark:bg-light cursor-pointer`}
+      className={`${className} absolute flex items-center justify-center rounded-full font-semibold bg-dark text-light 
+      py-3 lg:py-2 px-6 lg:px-4 md:text-sm md:py-1.5 md:px-3 shadow-dark
+       dark:text-dark dark:bg-light cursor-pointer xs:bg-dark xs:dark:bg-transparent
+        xs:text-light xs:dark:text-light xs:text-bold`}
       {...rest}
     >
       {children}

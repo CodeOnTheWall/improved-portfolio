@@ -7,12 +7,7 @@ import MobileCustomLink from "./MobileCustomLink";
 import MotionAnchor from "../Motion/MotionAnchor";
 import MotionDiv from "../Motion/MotionDiv";
 import useThemeSwitcher from "../Hooks/useThemeSwitcher";
-import {
-  LinkedInIcon,
-  GitHubIcon,
-  SunIcon,
-  MoonIcon,
-} from "../../app/[components]/Icons";
+import { LinkedInIcon, GitHubIcon, SunIcon, MoonIcon } from "../Icons";
 
 // React
 import { useState } from "react";
@@ -31,31 +26,34 @@ export default function NavBar() {
 
   return (
     <header
-      className="w-full px-32 py-8 dark:text-light dark:bg-dark border-b-2 
-      border-solid border-dark font-medium flex items-center justify-between relative"
+      className="w-full px-32 sm:px-20 py-8 dark:text-light dark:bg-dark border-b-2 
+      border-solid border-dark font-medium relative
+       "
     >
       {/* Hamburger */}
       <button
         onClick={handleHamburger}
-        className=" flex-col justify-center items-center hidden lg:flex"
+        // screen sizes lg or smaller get flex and flex-col
+        className="lg:flex hidden flex-col justify-center items-center  "
       >
         <span
           className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm  ${
             isOpen ? "rotate-45 translate-y-1" : "-translate-y-0.5"
           }`}
-        ></span>
+        />
         <span
           className={` bg-dark dark:bg-light block transition-all duration-300 ease-out  h-0.5 w-6 rounded-sm my-0.5 ${
             isOpen ? "opacity-0" : "opacity-100"
           }`}
-        ></span>
+        />
         <span
           className={` bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm  ${
             isOpen ? "-rotate-45 -translate-y-1" : "translate-y-0.5"
           }`}
-        ></span>
+        />
       </button>
 
+      {/* lg and below it will be hidden */}
       <div className=" w-full flex justify-between items-center lg:hidden">
         <nav>
           <CustomLink href="/" title="Home" className="mr-4" />

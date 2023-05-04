@@ -5,17 +5,20 @@ import { useInView, useMotionValue, useSpring } from "framer-motion";
 
 export default function AnimatedNumbers({ value }: { value: number }) {
   const ref = useRef<HTMLSpanElement>(null);
+  // detects when the provided element (AnimatedNumbers) is within the viewport
+  const isInView = useInView(ref, { once: true });
 
   const motionValue = useMotionValue(0);
   const springValue = useSpring(motionValue, { duration: 3000 });
-  //   when span element is in view
-  const isInView = useInView(ref, { once: true });
 
   // if isInView, set motionValue to the value passed in
   useEffect(() => {
-    if (isInView) {
-      motionValue.set(value);
-    }
+    const timer = setTimeout(() => {
+      if (isInView) {
+        motionValue.set(value);
+      }
+    }, 1000);
+    return () => clearTimeout(timer);
   }, [isInView, value, motionValue]);
 
   // on "change", which is essentially when a value is passed into the function
