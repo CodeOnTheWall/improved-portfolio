@@ -19,7 +19,8 @@ import TransitionEffect from "@/app/[components]/Motion/TransitionEffect";
 // Metadata
 export const metadata: Metadata = {
   title: "Projects",
-  description: "About page for Kris Sundquist",
+  description:
+    "About page for Kris Sundquist, featuring practice and client projects. Projects use a variety of full stack technologies, such as nodejs, react, nextjs, express, mern, mongodb, mongoose",
 };
 
 // Reusable Components

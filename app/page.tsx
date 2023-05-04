@@ -14,7 +14,7 @@ import Link from "next/link";
 // Metadata
 export const metadata = {
   title: "Kris Portfolio",
-  description: "Full Stack developer portfolio",
+  description: "Full Stack developer portfolio for Kris Sundquist.",
 };
 
 export default function page() {
@@ -49,7 +49,7 @@ export default function page() {
             </p>
             <div className=" flex items-center self-start mt-2 lg:self-center">
               <Link
-                href="/BralenSundquist.pdf"
+                href="/FullStackExtraordinaire.pdf"
                 target={"_blank"}
                 className=" flex items-center bg-dark text-light p-2.5 px-6
             rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark

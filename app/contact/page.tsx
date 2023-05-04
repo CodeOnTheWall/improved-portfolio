@@ -7,8 +7,9 @@ import ContactMeForm from "./[components]/ContactMeForm";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Me",
-  description: "Contact page for Kris Sundquist",
+  title: "Contact Kris Sundquist: Web Developer and Designer",
+  description:
+    "Get in touch with Kris Sundquist, a web developer and designer, for inquiries, collaborations, and more. Fill out the form or send an email to bralencsundquist@hotmail.com.",
 };
 
 export default function Contact() {
