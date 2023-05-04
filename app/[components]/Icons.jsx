@@ -1,12 +1,6 @@
 // use SVGR (website) to convert svgs to jsx to be more customizable
-import React, { FC, SVGProps } from "react";
 
-export function LinkedInIcon({}: //   className,
-//   ...props
-{
-  // className: string;
-  // props: string[];
-}): JSX.Element {
+export function LinkedInIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -30,7 +24,7 @@ export function LinkedInIcon({}: //   className,
   );
 }
 
-export function GitHubIcon({ className }: { className?: string }): JSX.Element {
+export function GitHubIcon({ className }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -48,13 +42,7 @@ export function GitHubIcon({ className }: { className?: string }): JSX.Element {
   );
 }
 
-export function LinkArrowIcon({
-  className,
-}: // ...props
-{
-  className: string;
-  // props: string[];
-}): JSX.Element {
+export function LinkArrowIcon({ className }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -77,13 +65,7 @@ export function LinkArrowIcon({
   );
 }
 
-export function CircularTextIcon({
-  className,
-}: // ...props
-{
-  className: string;
-  // props: string[];
-}): JSX.Element {
+export function CircularTextIcon({ className }) {
   return (
     <svg
       version="1.0"
@@ -308,13 +290,7 @@ m-33 -324 c10 -5 43 -14 72 -19 217 -41 259 -53 259 -76 0 -29 -49 -81 -101
   );
 }
 
-export function SunIcon({
-  className,
-}: // ...props
-{
-  className: string;
-  // props: string[];
-}): JSX.Element {
+export function SunIcon({ className }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -493,13 +469,7 @@ export function SunIcon({
   );
 }
 
-export function MoonIcon({
-  className,
-}: // ...props
-{
-  className: string;
-  // props: string[];
-}): JSX.Element {
+export function MoonIcon({ className }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
