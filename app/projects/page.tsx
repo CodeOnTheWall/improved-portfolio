@@ -108,7 +108,7 @@ const Project = ({
 }: FeaturedProjectTypes) => {
   return (
     <article
-      className={`w-full relative flex flex-col space-y-5 items-center justify-center rounded-2xl border border-solid border-dark bg-light
+      className={`w-full relative flex flex-col space-y-5 rounded-2xl border border-solid border-dark bg-light
        p-6 xs:p-4 col-span-6 xl:col-span-12 
       ${className}`}
     >

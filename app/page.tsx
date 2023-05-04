@@ -41,7 +41,7 @@ export default function page() {
               text="Turning Vision Into Reality With Code And Design."
               className=" !text-left lg:!text-center "
             />
-            <p className=" my-4 text-base font-semibold md:text-sm">
+            <p className=" my-4 text-lg font-semibold md:text-sm">
               As a skilled full-stack developer, I am dedicated to turning ideas
               into innovative web applications. Explore my latest projects,
               showcasing my expertise in React.js, Node.js, and other web

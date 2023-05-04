@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .contactInput {
+    @apply bg-[#e5e5e5] rounded-md border-b px-6 py-4 border-[#242424]
+     placeholder-[#457b9d] transition-all focus:border-[#F7AbbA]/40
+    focus:text-[#1d3557] hover:border-[#F7ABBA]/40;
+  }
+}
