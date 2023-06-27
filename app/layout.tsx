@@ -14,12 +14,8 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${montserrat.className} w-full h-screen bg-gradient-to-r from-orange-500 via-purple-500 to-blue-400 animate-gradient-xy`}
+      className={`${montserrat.className} w-full h-screen bg-gradient-to-r from-purple-400 via-purple-100 bg-purple-300 animate-gradient-xy`}
     >
-      {/* <html
-      lang="en"
-      className={`${montserrat.className} w-full h-screen `}
-    > */}
       <body>
         <Script id="theme-switcher" strategy="beforeInteractive">
           {`if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
