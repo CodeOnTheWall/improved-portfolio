@@ -16,9 +16,9 @@ const experience = [
   {
     position: "Financial Advisor",
     company: "Servus Credit Union",
-    time: "May 2018 - Jan 2022",
+    time: "April 2018 - Jan 2020",
     description:
-      "Giving financial planning advice with regards to investments (GIC and Mutual Funds), loan products including mortgages, insurance, and business/personal accounts and products",
+      "I provided financial planning advice related to investments (GICs and Mutual Funds), loan products (including mortgages), insurance, and business/personal accounts and products",
   },
   {
     position: "Customer Service Representative",
