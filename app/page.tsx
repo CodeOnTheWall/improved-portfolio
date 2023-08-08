@@ -42,10 +42,10 @@ export default function page() {
               className=" !text-left lg:!text-center "
             />
             <p className=" my-4 text-lg font-semibold md:text-sm">
-              As a skilled full-stack developer, I am dedicated to turning ideas
-              into innovative web applications. Explore my latest projects,
-              showcasing my expertise in React.js, Node.js, and other web
-              development technologies.
+              As a skilled full-stack developer, I am dedicated to transforming
+              ideas into innovative web applications. Explore my latest projects
+              showcasing expertise in MERN stack, Next.js applications, and
+              other web development technologies.
             </p>
             <div className=" flex items-center self-start mt-2 lg:self-center">
               <Link
