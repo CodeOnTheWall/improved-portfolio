@@ -2,9 +2,9 @@ import "./globals.css";
 import { montserrat } from "./fonts";
 
 // Components
-import NavBar from "./[components]/Header-and-Footer/NavBar";
-import Footer from "./[components]/Header-and-Footer/Footer";
-import HireMe from "./[components]/Header-and-Footer/HireMe";
+import NavBar from "./[components]/HeaderAndFooter/NavBar";
+import Footer from "./[components]/HeaderAndFooter/Footer";
+import HireMe from "./[components]/HeaderAndFooter/HireMe";
 
 // Providers
 import Providers from "./providers/providers";

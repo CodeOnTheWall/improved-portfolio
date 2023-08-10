@@ -1,16 +1,28 @@
 "use client";
 
+// React
+import { useState } from "react";
+// NextJS
 import Link from "next/link";
+// Framer Motion ts types
 import { motion } from "framer-motion";
+// Components
+import TypeWriter from "./TypeWriter";
 
 const MotionLink = motion(Link);
 
 export default function Logo() {
+  const [textChatIsOpen, setTextChatIsOpen] = useState(false);
+
+  const toggleTextChat = () => {
+    setTextChatIsOpen(!textChatIsOpen);
+  };
+
   return (
-    <div className="flex items-center justify-center mt-2 lg:mt-1">
+    <div className="relative">
       <MotionLink
         href="/"
-        className="w-16 h-16 lg:w-14 lg:h-14  bg-dark text-light 
+        className=" w-12 h-12 md:w-14 md:h-14  bg-dark text-light 
         flex items-center justify-center rounded-full text-2xl font-bold
         border border-solid border-transparent dark:border-light"
         whileHover={{
@@ -24,9 +36,12 @@ export default function Logo() {
           ],
           transition: { duration: 1, repeat: Infinity },
         }}
+        onMouseEnter={toggleTextChat}
       >
-        KS
+        BS
       </MotionLink>
+
+      {textChatIsOpen && <TypeWriter />}
     </div>
   );
 }
