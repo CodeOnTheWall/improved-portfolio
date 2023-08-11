@@ -4,7 +4,6 @@ import { montserrat } from "./fonts";
 // Components
 import NavBar from "./[components]/HeaderAndFooter/NavBar";
 import Footer from "./[components]/HeaderAndFooter/Footer";
-import HireMe from "./[components]/HeaderAndFooter/HireMe";
 
 // Providers
 import Providers from "./providers/providers";
@@ -20,7 +19,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <Providers>
           <NavBar />
           {children}
-          <HireMe />
           <Footer />
         </Providers>
       </body>

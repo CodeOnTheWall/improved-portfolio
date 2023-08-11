@@ -175,142 +175,139 @@ const Project = ({
 
 export default function Projects() {
   return (
-    <>
-      <TransitionEffect />
-      <Layout className="flex-col dark:bg-dark !pt-16">
-        <AnimatedText
-          text="Always Imagining."
-          className=" mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
-        />
-        <StackTitle className=" mb-10">MERN Full-Stack Projects</StackTitle>
-        <div
-          className=" grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16
+    <Layout className="flex-col dark:bg-dark !pt-16">
+      <AnimatedText
+        text="Always Imagining."
+        className=" mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
+      />
+      <StackTitle className=" mb-10">MERN Full-Stack Projects</StackTitle>
+      <div
+        className=" grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16
        lg:gap-x-8 md:gap-y-24 sm:gap-x-0"
-        >
-          <FeaturedProject
-            className=" dark:bg-gradient-to-r 
+      >
+        <FeaturedProject
+          className=" dark:bg-gradient-to-r 
           from-purple-300
           to-pink-500
           via-red-400            
          animate-gradient-xy"
-            img={technotesmern}
-            title="MERN stack Employee TechNotes Application"
-            summary="In this employee techNotes MERN project, users can easily create, read, update, and delete tickets based on their assigned roles. These CRUD operations are effectively communicated to the powerful backend REST API using Redux Toolkit Query and NodeJS, which incorporates highly efficient caching capabilities to deliver a fast and efficient application experience by reducing API calls and component re-renders. The application is equipped with a modern security system that offers fully authenticated user access and highly specific authorization routes and functionality. This allows admin to perform a range of key functions, including assigning tickets to designated employees and deleting employees when necessary. These operations are carried out with the use of sophisticated JWT's (Jason web tokens), which are issued via backend REST API and sent to the client via access tokens and refresh tokens. To enhance the user experience further, custom hooks such as useAuth, pre-fetch, and persist login have been developed. These hooks enable users to stay logged in during refreshes, access the most up-to-date information, and dictate which roles and functions they can access based on their assigned roles. Additionally, the application is entirely written in Typescript, ensuring a more structured, error-free codebase."
-            type="Featured Project"
-            github="https://github.com/CodeOnTheWall/techNotes"
-            link="https://github.com/CodeOnTheWall/techNotes"
-          />
-        </div>
+          img={technotesmern}
+          title="MERN stack Employee TechNotes Application"
+          summary="In this employee techNotes MERN project, users can easily create, read, update, and delete tickets based on their assigned roles. These CRUD operations are effectively communicated to the powerful backend REST API using Redux Toolkit Query and NodeJS, which incorporates highly efficient caching capabilities to deliver a fast and efficient application experience by reducing API calls and component re-renders. The application is equipped with a modern security system that offers fully authenticated user access and highly specific authorization routes and functionality. This allows admin to perform a range of key functions, including assigning tickets to designated employees and deleting employees when necessary. These operations are carried out with the use of sophisticated JWT's (Jason web tokens), which are issued via backend REST API and sent to the client via access tokens and refresh tokens. To enhance the user experience further, custom hooks such as useAuth, pre-fetch, and persist login have been developed. These hooks enable users to stay logged in during refreshes, access the most up-to-date information, and dictate which roles and functions they can access based on their assigned roles. Additionally, the application is entirely written in Typescript, ensuring a more structured, error-free codebase."
+          type="Featured Project"
+          github="https://github.com/CodeOnTheWall/techNotes"
+          link="https://github.com/CodeOnTheWall/techNotes"
+        />
+      </div>
 
-        <StackTitle className=" mt-20 mb-10">
-          NextJS Full-Stack Projects
-        </StackTitle>
-        <div
-          className=" grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16
+      <StackTitle className=" mt-20 mb-10">
+        NextJS Full-Stack Projects
+      </StackTitle>
+      <div
+        className=" grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16
        lg:gap-x-8 md:gap-y-24 sm:gap-x-0"
-        >
-          <Project
-            className=" dark:bg-gradient-to-r 
+      >
+        <Project
+          className=" dark:bg-gradient-to-r 
           from-orange-300
          to-orange-200
           via-orange-50
           animate-gradient-xy"
-            img={AIPrompts}
-            title="Promptzila"
-            summary="Utilizing the latest features of Next.js 13.4 (stable app directory), this AI prompt sharing full-stack application incorporates comprehensive CRUD operations. It leverages the new server routes functionality and is powered by next-auth 2023 and MongoDB for the database. The app allows users to authenticate themselves in order to create captivating prompts for use with AI tools. Additionally, users are authorized to modify or delete their own posts while having read-only access to other users' prompts. The application also offers search capabilities for tags and prompts, as well as the ability to explore other users' profiles and their respective prompts. In addition to the functionality, this application is sleekly designed with modern Tailwind CSS"
-            type="NextJS Full-Stack"
-            github="https://github.com/CodeOnTheWall/AI-Prompt-Maker-NextJS"
-            link="https://ai-prompt-maker-next-js.vercel.app/"
-            website="Website"
-          />
-          <Project
-            className=" dark:bg-gradient-to-r 
+          img={AIPrompts}
+          title="Promptzila"
+          summary="Utilizing the latest features of Next.js 13.4 (stable app directory), this AI prompt sharing full-stack application incorporates comprehensive CRUD operations. It leverages the new server routes functionality and is powered by next-auth 2023 and MongoDB for the database. The app allows users to authenticate themselves in order to create captivating prompts for use with AI tools. Additionally, users are authorized to modify or delete their own posts while having read-only access to other users' prompts. The application also offers search capabilities for tags and prompts, as well as the ability to explore other users' profiles and their respective prompts. In addition to the functionality, this application is sleekly designed with modern Tailwind CSS"
+          type="NextJS Full-Stack"
+          github="https://github.com/CodeOnTheWall/AI-Prompt-Maker-NextJS"
+          link="https://ai-prompt-maker-next-js.vercel.app/"
+          website="Website"
+        />
+        <Project
+          className=" dark:bg-gradient-to-r 
           from-orange-300
          to-orange-200
           via-orange-50
           animate-gradient-xy"
-            img={ImageGenerator}
-            title="UnSplash Image Generator"
-            summary="Presenting an impressive showcase of Next.js 13.4's stable app directory, this application highlights the latest core features, including static, dynamic, client, and ISR data fetching and caching. To exemplify these capabilities, I have seamlessly integrated the Unsplash API, leveraging server components for all API calls. Each page exemplifies a unique approach to fetching and storing data. Furthermore, dynamic routes are complemented by dynamic generation of metadata. Written in Typescript."
-            type="NextJS Full-Stack"
-            github="https://github.com/CodeOnTheWall/Image-Generator-NextJS"
-            link="https://image-generator-next-js-ecru.vercel.app/"
-            website="Website"
-          />
-        </div>
+          img={ImageGenerator}
+          title="UnSplash Image Generator"
+          summary="Presenting an impressive showcase of Next.js 13.4's stable app directory, this application highlights the latest core features, including static, dynamic, client, and ISR data fetching and caching. To exemplify these capabilities, I have seamlessly integrated the Unsplash API, leveraging server components for all API calls. Each page exemplifies a unique approach to fetching and storing data. Furthermore, dynamic routes are complemented by dynamic generation of metadata. Written in Typescript."
+          type="NextJS Full-Stack"
+          github="https://github.com/CodeOnTheWall/Image-Generator-NextJS"
+          link="https://image-generator-next-js-ecru.vercel.app/"
+          website="Website"
+        />
+      </div>
 
-        <StackTitle className=" mt-20 mb-10">Client Projects</StackTitle>
-        <div
-          className=" grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16
+      <StackTitle className=" mt-20 mb-10">Client Projects</StackTitle>
+      <div
+        className=" grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16
        lg:gap-x-8 md:gap-y-24 sm:gap-x-0"
-        >
-          <Project
-            className=" dark:bg-gradient-to-r 
+      >
+        <Project
+          className=" dark:bg-gradient-to-r 
         from-orange-300
        to-orange-200
         via-orange-50
         animate-gradient-xy"
-            img={nutritiva}
-            title="Nutritiva"
-            summary="Crafted with modern UI design principles in mind, this fully responsive website for a nutritionist is designed to engage and captivate users. The sleek and stylish UI is created using cutting-edge technologies like Tailwind CSS and Framer Motion, making it stand out from the crowd. The website features Stripe payment integration via the Stripe API, providing users with a hassle-free payment experience. Additionally, the website integrates with Calendly Booking, streamlining the booking process. The technology stack powering this website includes React 18, NextJS 13, and Sanity v3 for the backend, ensuring a smooth and seamless experience for both the user and the nutritionist."
-            type="Client Project"
-            github="https://github.com/CodeOnTheWall/nutritiva"
-            link="https://nutritivamex.com/"
-            website="Website"
-          />
-          <Project
-            className=" dark:bg-gradient-to-r 
+          img={nutritiva}
+          title="Nutritiva"
+          summary="Crafted with modern UI design principles in mind, this fully responsive website for a nutritionist is designed to engage and captivate users. The sleek and stylish UI is created using cutting-edge technologies like Tailwind CSS and Framer Motion, making it stand out from the crowd. The website features Stripe payment integration via the Stripe API, providing users with a hassle-free payment experience. Additionally, the website integrates with Calendly Booking, streamlining the booking process. The technology stack powering this website includes React 18, NextJS 13, and Sanity v3 for the backend, ensuring a smooth and seamless experience for both the user and the nutritionist."
+          type="Client Project"
+          github="https://github.com/CodeOnTheWall/nutritiva"
+          link="https://nutritivamex.com/"
+          website="Website"
+        />
+        <Project
+          className=" dark:bg-gradient-to-r 
            from-blue-400
            to-blue-300
            via-blue-100
            animate-gradient-xy"
-            img={ascensionmarketing}
-            title="Ascension Marketing"
-            summary="This landing page for a marketing company is built with a focus on functionality and practicality. It uses popular UI libraries such as FramerMotion and Tailwind CSS to create a clean and straightforward design that delivers information effectively. Clients can easily book appointments using our Calendly API integration, streamlining the process for everyone involved. The technology stack is built on reliable frameworks such as React 18 and NextJS 13, ensuring a stable and dependable experience for users. Overall, this landing page is designed to be practical and effective, without sacrificing quality or functionality."
-            type="Client Project"
-            github="https://github.com/CodeOnTheWall/Ascension-Marketing"
-            link="https://ascensionmarketingteam.com/"
-            website="Website"
-          />
-        </div>
+          img={ascensionmarketing}
+          title="Ascension Marketing"
+          summary="This landing page for a marketing company is built with a focus on functionality and practicality. It uses popular UI libraries such as FramerMotion and Tailwind CSS to create a clean and straightforward design that delivers information effectively. Clients can easily book appointments using our Calendly API integration, streamlining the process for everyone involved. The technology stack is built on reliable frameworks such as React 18 and NextJS 13, ensuring a stable and dependable experience for users. Overall, this landing page is designed to be practical and effective, without sacrificing quality or functionality."
+          type="Client Project"
+          github="https://github.com/CodeOnTheWall/Ascension-Marketing"
+          link="https://ascensionmarketingteam.com/"
+          website="Website"
+        />
+      </div>
 
-        <StackTitle className=" mt-20 mb-10">
-          Pure React Front-End Projects
-        </StackTitle>
-        <div
-          className=" grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16
+      <StackTitle className=" mt-20 mb-10">
+        Pure React Front-End Projects
+      </StackTitle>
+      <div
+        className=" grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16
        lg:gap-x-8 md:gap-y-24 sm:gap-x-0"
-        >
-          <Project
-            className=" dark:bg-gradient-to-r 
+      >
+        <Project
+          className=" dark:bg-gradient-to-r 
         from-orange-300
        to-orange-200
         via-orange-50
         animate-gradient-xy"
-            img={reactlogo}
-            title="MERN stack Expense Tracker"
-            summary="In this beginner React project, my focus was on understanding and implementing core React features. I learned to pass data via props, share data application-wide via use-context, manage state more effectively using use-reducer, and conditionally render JSX based on specific states. Additionally, I explored use-effect to manage form validity and apply CSS classes, as well as use-ref to target specific form fields based on user inputs. Throughout the project, I gained extra practice with core JavaScript, including array and Math methods. The project included creating reusable React components, such as form inputs, card wrappers, and buttons. As my knowledge of full-stack development increased, I went back to add additional advanced features such as efficient caching and limited API calls via Redux Toolkit Query, in tandem with the other MERN technologies, to create a full-stack expense tracker."
-            type="Project"
-            github="https://github.com/CodeOnTheWall/Expense-Tracker"
-            link="https://github.com/CodeOnTheWall/Expense-Tracker"
-            website="Project"
-          />
-          <Project
-            className=" dark:bg-gradient-to-r 
+          img={reactlogo}
+          title="MERN stack Expense Tracker"
+          summary="In this beginner React project, my focus was on understanding and implementing core React features. I learned to pass data via props, share data application-wide via use-context, manage state more effectively using use-reducer, and conditionally render JSX based on specific states. Additionally, I explored use-effect to manage form validity and apply CSS classes, as well as use-ref to target specific form fields based on user inputs. Throughout the project, I gained extra practice with core JavaScript, including array and Math methods. The project included creating reusable React components, such as form inputs, card wrappers, and buttons. As my knowledge of full-stack development increased, I went back to add additional advanced features such as efficient caching and limited API calls via Redux Toolkit Query, in tandem with the other MERN technologies, to create a full-stack expense tracker."
+          type="Project"
+          github="https://github.com/CodeOnTheWall/Expense-Tracker"
+          link="https://github.com/CodeOnTheWall/Expense-Tracker"
+          website="Project"
+        />
+        <Project
+          className=" dark:bg-gradient-to-r 
            from-blue-400
            to-blue-300
            via-blue-100
            animate-gradient-xy"
-            img={reactlogo}
-            title="Food Order App"
-            summary="In this pure front-end React application, I delved deeply into the various React hooks, including useState, useEffect, useContext, and useReducer, and even created my own custom hooks. This immersive experience not only enhanced my understanding of React, but also provided an opportunity to sharpen my JavaScript skills, particularly within the cart logic and throughout the application."
-            type="Project"
-            github="https://github.com/CodeOnTheWall/food-order-app"
-            link="https://github.com/CodeOnTheWall/food-order-app"
-            website="Project"
-          />
-        </div>
-      </Layout>
-    </>
+          img={reactlogo}
+          title="Food Order App"
+          summary="In this pure front-end React application, I delved deeply into the various React hooks, including useState, useEffect, useContext, and useReducer, and even created my own custom hooks. This immersive experience not only enhanced my understanding of React, but also provided an opportunity to sharpen my JavaScript skills, particularly within the cart logic and throughout the application."
+          type="Project"
+          github="https://github.com/CodeOnTheWall/food-order-app"
+          link="https://github.com/CodeOnTheWall/food-order-app"
+          website="Project"
+        />
+      </div>
+    </Layout>
   );
 }

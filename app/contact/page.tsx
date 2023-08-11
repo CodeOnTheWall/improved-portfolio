@@ -14,15 +14,12 @@ export const metadata: Metadata = {
 
 export default function Contact() {
   return (
-    <>
-      <TransitionEffect />
-      <Layout className="dark:bg-dark flex-col min-h-screen !pt-16">
-        <AnimatedText
-          text="Let's Talk"
-          className=" mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
-        />
-        <ContactMeForm />
-      </Layout>
-    </>
+    <Layout className="dark:bg-dark flex-col min-h-screen !pt-16">
+      <AnimatedText
+        text="Let's Talk"
+        className=" mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
+      />
+      <ContactMeForm />
+    </Layout>
   );
 }

@@ -6,13 +6,16 @@ import Link from "next/link";
 // Components
 import { CircularTextIcon } from "../Icons";
 
-export default function HireMe() {
+interface HireMeProps {
+  className: string;
+}
+
+export default function HireMe({ className }: HireMeProps) {
   return (
     <div
-      className=" fixed md:absolute right-14 bottom-14 flex items-center justify-center overflow-hidden
-    md:-top-2 md:bottom-auto"
+      className={`${className} flex items-center justify-center overflow-hidden`}
     >
-      <div className=" w-24 md:w-48 h-auto flex items-center justify-center">
+      <div className=" w-28 lg:w-48 h-auto flex items-center justify-center">
         <CircularTextIcon
           className=" fill-dark dark:fill-light animate-spin-slow
         "
@@ -20,7 +23,7 @@ export default function HireMe() {
         <Link
           href="/contact"
           className=" flex items-center justify-center absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-dark text-light
-           shadow-md border border-solid border-dark w-12 h-12 md:w-20 md:h-20 rounded-full text-[12px] md:font-semibold 
+           shadow-md border border-solid border-dark w-12 h-12 lg:w-20 lg:h-20 rounded-full text-[14px] lg:font-bold
            hover:bg-light hover:text-dark 
            dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light
             text-center"

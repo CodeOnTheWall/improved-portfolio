@@ -32,21 +32,20 @@ const singleWord = {
   },
 };
 
-export default function AnimatedText({
-  text,
-  className,
-}: {
+interface AnimatedTextProps {
   text: string;
-  className?: string;
-}) {
+  className: string;
+}
+
+export default function AnimatedText({ text, className }: AnimatedTextProps) {
   return (
     <div
       className="w-full mx-auto py-2 items-center justify-center text-center overflow-hidden
      sm:p-0"
     >
       <motion.h1
-        className={`${className} w-full text-dark dark:text-light font-bold capitalize text-8xl
-        lg:text-6xl md:text-5xl `}
+        className={`${className} w-full text-dark dark:text-light font-bold capitalize 
+      text-3xl md:text-5xl lg:text-6xl`}
         // telling the variants to use initial from quote, and animate from quote
         variants={quote}
         initial="initial"

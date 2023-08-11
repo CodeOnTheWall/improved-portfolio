@@ -13,6 +13,7 @@ import { LinkedInIcon, GitHubIcon } from "../Icons";
 // React
 import { useState } from "react";
 import ThemeSwitcher from "../Hooks/useThemeSwitcher";
+import HireMe from "./HireMe";
 
 export default function NavBar() {
   const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
@@ -84,6 +85,7 @@ bg-dark/90 dark:bg-light/75 rounded-lg backdrop-blur-md py-32"
           }`}
         />
       </button>
+      <HireMe className="absolute lg:hidden -top-4 right-1" />
 
       <div className="hidden lg:flex w-full justify-between items-center">
         <nav>
