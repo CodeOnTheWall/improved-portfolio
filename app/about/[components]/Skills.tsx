@@ -1,74 +1,106 @@
 import MotionDiv from "@/app/[components]/Motion/MotionDiv";
-import MotionSkill from "./MotionSkill";
+import AnimatedText from "@/app/[components]/Motion/AnimatedText";
 
 export default function Skills() {
   return (
-    <>
-      <h2 className=" font-bold text-8xl mt-64 w-full text-center">Skills</h2>
-      <div
-        className=" w-full h-screen lg:h-[80vh] sm:h-[60vh] relative flex items-center justify-center rounded-full bg-circularLight dark:bg-circularDark
-        "
-      >
-        <MotionDiv
-          className=" flex items-center justify-center rounded-full font-semibold bg-dark text-light p-8 shadow-dark
-           lg:p-6 md:p-4 xs:text-xs xs:p-2"
-          whileHover={{ scale: 1.05 }}
-        >
-          Web
-        </MotionDiv>
+    <div className="my-20 md:my-32">
+      <AnimatedText text="Skills" />
+      <div className=" w-full flex flex-col items-center">
+        <h1 className=" my-10 text-3xl first-letter:font-bold underline underline-offset-2 decoration-black dark:decoration-white">
+          Front End
+        </h1>
+        <div className="md:grid grid-cols-12 gap-x-10 gap-y-10">
+          <div className="flex flex-col md:col-span-4 lg:col-span-4">
+            <h2 className=" text-md lg:text-2xl font-bold">Languages</h2>
+            <ul>
+              <li>Javascript</li>
+              <li>TypeScript</li>
+            </ul>
+          </div>
+          <div className="flex flex-col   md:col-span-4 lg:col-span-4">
+            <h2 className=" text-md lg:text-2xl font-bold">Frameworks</h2>
+            <ul>
+              <li>React</li>
+              <li>NextJS</li>
+            </ul>
+          </div>
+          <div className="flex flex-col  md:col-span-2 lg:col-span-4">
+            <h2 className=" text-md lg:text-2xl font-bold">
+              State Management Libraries
+            </h2>
+            <ul>
+              <li>Redux</li>
+              <li>Redux Toolkit Query (caching and api call management)</li>
+              <li>Zustand</li>
+            </ul>
+          </div>
+          <div className="flex flex-col  md:col-span-4">
+            <h2 className=" text-md lg:text-2xl font-bold">Styling/Markup</h2>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Tailwind CSS</li>
+              <li>Framer Motion</li>
+            </ul>
+          </div>
+          <div className="flex flex-col   md:col-span-4">
+            <h2 className="text-md lg:text-2xl font-bold">
+              Component Libraries
+            </h2>
+            <ul>
+              <li>Shadcn</li>
+              <li>Bootstrap</li>
+              <li>React Hook Form</li>
+              <li>Zod (TypeScript form validation)</li>
+            </ul>
+          </div>
+        </div>
 
-        <MotionSkill x="-6vw" y="-8vw">
-          CSS
-        </MotionSkill>
-        <MotionSkill x="6vw" y="-8vw">
-          Redux
-        </MotionSkill>
-        <MotionSkill x="-8vw" y="8vw">
-          TypeScript
-        </MotionSkill>
-        <MotionSkill x="8vw" y="8vw">
-          React
-        </MotionSkill>
-
-        <MotionSkill x="-15vw" y="0vw">
-          HTML
-        </MotionSkill>
-        <MotionSkill x="15vw" y="0vw">
-          Javascript
-        </MotionSkill>
-        <MotionSkill x="0" y="-15vw">
-          NodeJS
-        </MotionSkill>
-        <MotionSkill x="0vw" y="15vw">
-          NextJS
-        </MotionSkill>
-
-        <MotionSkill x="16vw" y="20vw">
-          TailWind CSS
-        </MotionSkill>
-        <MotionSkill x="-16vw" y="-20vw">
-          MongoDB
-        </MotionSkill>
-        <MotionSkill x="-16vw" y="20vw">
-          PostMan
-        </MotionSkill>
-        <MotionSkill x="16vw" y="-20vw">
-          Sanity
-        </MotionSkill>
-
-        <MotionSkill x="-25vw" y="10vw">
-          MVC
-        </MotionSkill>
-        <MotionSkill x="25vw" y="-10vw">
-          JWT's
-        </MotionSkill>
-        <MotionSkill x="25vw" y="10vw">
-          REST API's
-        </MotionSkill>
-        <MotionSkill x="-25vw" y="-10vw">
-          Framer Motion
-        </MotionSkill>
+        <h1 className=" my-10 text-3xl first-letter:font-bold underline underline-offset-2 decoration-black dark:decoration-white">
+          Back End
+        </h1>
+        <div className="md:grid grid-cols-12 gap-x-10 gap-y-10">
+          <div className="flex flex-col  md:col-span-6 lg:col-span-4">
+            <h2 className=" text-md lg:text-2xl font-bold">Databases/APIs</h2>
+            <ul>
+              <li>MongoDB</li>
+              <li>PostgreSQL</li>
+              <li>MySQL</li>
+              <li>Prisma</li>
+              <li>Postman (API testing)</li>
+              <li>Thunderclient</li>
+            </ul>
+          </div>
+          <div className="flex flex-col  md:col-span-6 lg:col-span-4">
+            <h2 className=" text-md lg:text-2xl font-bold">
+              Content Management
+            </h2>
+            <ul>
+              <li>Sanity</li>
+            </ul>
+          </div>
+          <div className="flex flex-col  md:col-span-6 lg:col-span-4">
+            <h2 className=" text-md lg:text-2xl font-bold">
+              Authentication/Authorization
+            </h2>
+            <ul>
+              <li>JWT's</li>
+              <li>NextAuth</li>
+              <li>ClerkAuth</li>
+            </ul>
+          </div>
+          <div className="flex flex-col  md:col-span-6 lg:col-span-4 ">
+            <h2 className=" text-md lg:text-2xl font-bold">
+              Backend Technologies
+            </h2>
+            <ul>
+              <li>Node.js</li>
+              <li>REST API's</li>
+              <li>MVC</li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </>
+    </div>
   );
 }

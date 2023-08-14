@@ -3,6 +3,8 @@
 import { useScroll, motion } from "framer-motion";
 import { useRef } from "react";
 
+import AnimatedText from "@/app/[components]/Motion/AnimatedText";
+
 import Details from "./Details";
 
 const eduction = [
@@ -51,10 +53,9 @@ export default function Education() {
     offset: ["start end", "center start"],
   });
   return (
-    <div className=" my-64">
-      <h2 className=" font-bold text-8xl mb-32 w-full text-center md:text-6xl xs:text-4xl md:mb-16">
-        Education
-      </h2>
+    <div className="my-20 md:my-32">
+      <AnimatedText text="Education" className=" my-10" />
+
       <div
         ref={ref}
         className=" w-[75%] lg:w-[90%] md:w-full mx-auto relative "
