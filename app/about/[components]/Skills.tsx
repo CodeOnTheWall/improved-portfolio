@@ -3,13 +3,13 @@ import AnimatedText from "@/app/[components]/Motion/AnimatedText";
 
 export default function Skills() {
   return (
-    <div className="my-20 md:my-32">
+    <div className="mt-20 md:mt-64">
       <AnimatedText text="Skills" />
       <div className=" w-full flex flex-col items-center">
         <h1 className=" my-10 text-3xl first-letter:font-bold underline underline-offset-2 decoration-black dark:decoration-white">
           Front End
         </h1>
-        <div className="md:grid grid-cols-12 gap-x-10 gap-y-10">
+        <div className="md:grid grid-cols-12 gap-x-10 gap-y-10 w-full">
           <div className="flex flex-col md:col-span-4 lg:col-span-4">
             <h2 className=" text-md lg:text-2xl font-bold">Languages</h2>
             <ul>
@@ -59,7 +59,7 @@ export default function Skills() {
         <h1 className=" my-10 text-3xl first-letter:font-bold underline underline-offset-2 decoration-black dark:decoration-white">
           Back End
         </h1>
-        <div className="md:grid grid-cols-12 gap-x-10 gap-y-10">
+        <div className="md:grid grid-cols-12 gap-x-10 gap-y-10 w-full">
           <div className="flex flex-col  md:col-span-6 lg:col-span-4">
             <h2 className=" text-md lg:text-2xl font-bold">Databases/APIs</h2>
             <ul>

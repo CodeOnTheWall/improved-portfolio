@@ -34,16 +34,16 @@ export default function Details({
         whileInView={{ y: 0 }}
         transition={{ duration: 0.5, type: "spring" }}
       >
-        <h3 className=" capitalize font-bold text-lg xs:text-xl sm:text-2xl ">
+        <h3 className=" capitalize font-bold text-2xl ">
           {title || position}&nbsp;
           <span className=" capitalize text-purple-400">
             @{place || company}
           </span>
         </h3>
-        <span className=" capitalize font-medium text-dark/75 dark:text-light/75 text-sm">
+        <span className=" capitalize font-medium text-dark/75 dark:text-light/75 xs:text-sm">
           {time}
         </span>
-        <p className=" font-medium w-full text-sm">{description}</p>
+        <p className=" font-medium w-full ">{description}</p>
       </MotionDiv>
     </li>
   );

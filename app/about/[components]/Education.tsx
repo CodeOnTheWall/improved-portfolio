@@ -53,19 +53,16 @@ export default function Education() {
     offset: ["start end", "center start"],
   });
   return (
-    <div className="my-20 md:my-32">
+    <div className="mt-20 md:mt-64">
       <AnimatedText text="Education" className=" my-10" />
 
-      <div
-        ref={ref}
-        className=" w-[75%] lg:w-[90%] md:w-full mx-auto relative "
-      >
+      <div ref={ref} className="w-[80%] mx-auto relative ">
         <motion.div
           style={{ scaleY: scrollYProgress }}
-          className=" absolute left-9 top-1 w-[4px] h-full bg-dark origin-top dark:bg-light
-          md:w-[2px] md:left-[30px] xs:left-[20px]"
+          className=" absolute -left-2  top-1 w-[2px] md:w-[4px]  h-full bg-dark origin-top dark:bg-light
+           "
         />
-        <ul className=" w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
+        <ul className="w-full flex flex-col items-center">
           {eduction.map((courses) => (
             <Details
               title={courses.title}

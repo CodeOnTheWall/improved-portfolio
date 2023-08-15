@@ -1,11 +1,8 @@
 "use client";
-
 import { useScroll, motion } from "framer-motion";
 import { useRef } from "react";
-
-import AnimatedText from "@/app/[components]/Motion/AnimatedText";
-
 import Details from "./Details";
+import AnimatedText from "@/app/[components]/Motion/AnimatedText";
 
 const experience = [
   {
@@ -30,7 +27,6 @@ const experience = [
       "I provided outstanding customer service by handling day-to-day transactions and identifying opportunities to refer customers to other departments for loans and investments.",
   },
 ];
-
 // offset: ["start end", "center start"] means that the animation should start when the
 // top of the referenced div (start) meets the bottom of the container (end) and end when
 // the center of the referenced div (center) meets the top of the container (start).
@@ -42,17 +38,15 @@ export default function Experience() {
     offset: ["start end", "center start"],
   });
   return (
-    <div className="my-20 md:my-32">
+    <div className="mt-20 md:mt-64">
       <AnimatedText text="Experience" className=" my-10" />
-
-      <div ref={ref} className="lg:w-[75%] md:w-full mx-auto relative ">
+      <div ref={ref} className=" w-[80%] mx-auto relative ">
         <motion.div
           style={{ scaleY: scrollYProgress }}
-          className=" absolute  top-1 w-[4px] md:w-[2px] h-full bg-dark origin-top dark:bg-light
-          left-[20px] md:left-[30px] lg:left-9"
+          className=" absolute -left-2  top-1 w-[2px] md:w-[4px]  h-full bg-dark origin-top dark:bg-light
+           "
         />
-
-        <ul className="w-full flex flex-col items-start justify-between ml-2 xs:ml-4 ">
+        <ul className="w-full flex flex-col items-center">
           {experience.map((detail, index) => (
             <Details
               key={index}
