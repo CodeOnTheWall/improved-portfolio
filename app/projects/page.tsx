@@ -10,20 +10,19 @@ import ImageGenerator from "../../public/projects/ImageGenerator.png";
 import AnimatedText from "@/app/[components]/Motion/AnimatedText";
 import { GitHubIcon } from "@/app/[components]/Icons";
 import Layout from "@/app/[components]/Layout/Layout";
-import StackTitle from "../[components]/Design/h1";
+import StackTitle from "./[components]/StackTitle";
 
 // NextJS
 import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
 import { StaticImageData } from "next/image";
-import TransitionEffect from "@/app/[components]/Motion/TransitionEffect";
 
 // Metadata
 export const metadata: Metadata = {
   title: "Projects",
   description:
-    "About page for Kris Sundquist, featuring practice and client projects. Projects use a variety of full stack technologies, such as nodejs, react, nextjs, express, mern, mongodb, mongoose",
+    "About page for Bralen Sundquist, featuring practice and client projects. Projects use a variety of full stack technologies, such as nodejs, react, nextjs, express, mern, mongodb, mongoose",
 };
 
 // Reusable Components
@@ -49,51 +48,55 @@ const FeaturedProject = ({
 }: FeaturedProjectTypes) => {
   return (
     <article
-      className={`w-full flex items-center justify-between rounded-3xl border border-solid border-dark bg-light shadow-2xl p-12 relative
-     lg:flex-col xs:p-4 lg:p-8 xs:rounded-2xl col-span-12 ${className}`}
+      // for the absolute shadow to work, the parent item has to have relative
+      className={`w-full flex flex-col items-center rounded-2xl md:rounded-3xl border border-solid border-dark bg-light shadow-2xl relative
+     p-4 md:p-8 lg:p-12 gap-y-6 ${className}`}
     >
       <div className=" absolute top-3 -right-3 -z-10 w-[100%] h-[100%] rounded-2xl bg-dark " />
 
-      <Link
-        href={link}
-        target="_blank"
-        className=" w-1/2 lg:w-full cursor-pointer overflow-hidden rounded-lg"
-      >
-        <Image src={img} alt={title} priority className=" w-full h-auto" />
-      </Link>
-
-      <div className=" w-1/2 lg:w-full lg:pl-0 lg:pt-0  flex flex-col items-start justify-between pl-6">
-        <span className=" text-primary font-medium text-xl xs:text-base lg:mt-2">
+      <div className="w-full flex flex-col xl:flex-row justify-evenly items-center gap-y-3 md:gap-y-0">
+        <h1 className=" text-primary dark:text-black font-medium text-lg lg:text-xl self-center">
           {type}
-        </span>
+        </h1>
         <Link
           href={link}
           target="_blank"
           className=" hover:underline underline-offset-2"
         >
-          <h2 className=" my-2 w-full text-left text-4xl font-bold sm:text-sm">
+          <h2 className="font-bold dark:text-black text-base md:text-lg xl:text-4xl text-center ">
             {title}
           </h2>
         </Link>
+      </div>
+
+      <div className=" w-full flex flex-col lg:flex-row justify-center items-center space-x-5 space-y-5 md:space-y-0">
+        <Link
+          href={link}
+          target="_blank"
+          className="w-full lg:w-[50%]  cursor-pointer overflow-hidden rounded-lg"
+        >
+          <Image src={img} alt={title} priority className=" w-full h-auto" />
+        </Link>
         <p
-          className=" my-2 font-medium text-dark sm:text-sm  overflow-y-auto
-  sm:scrollbar-thin sm:h-[300px] scrollbar-track-[#a4ac86] scrollbar-thumb-[#1b4332]"
+          className=" text-dark text-sm md:text-lg overflow-y-auto w-full lg:w-[50%]
+  scrollbar-thin max-h-[300px] scrollbar-track-[#a4ac86] scrollbar-thumb-[#1b4332]"
         >
           {summary}
         </p>
-        <div className=" mt-2 flex items-center">
-          <Link href={github} target="_blank" className=" w-10">
-            <GitHubIcon />
-          </Link>
-          <Link
-            href={link}
-            target="_blank"
-            className=" ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold
-            sm:px-4 sm:text-base  "
-          >
-            Visit Project
-          </Link>
-        </div>
+      </div>
+
+      <div className=" w-full space-x-5 flex items-center justify-center">
+        <Link href={github} target="_blank" className=" w-10">
+          <GitHubIcon />
+        </Link>
+        <Link
+          href={link}
+          target="_blank"
+          className=" rounded-lg bg-dark text-light p-2 px-6 text-base md:text-lg font-semibold
+            sm:px-4   "
+        >
+          Visit Project
+        </Link>
       </div>
     </article>
   );
@@ -112,30 +115,30 @@ const Project = ({
 }: FeaturedProjectTypes) => {
   return (
     <article
-      className={`w-full relative flex flex-col space-y-5 rounded-2xl border border-solid border-dark bg-light
-       p-6 xs:p-4 col-span-6 xl:col-span-12 
+      className={` w-full lg:w-[40%] relative flex flex-col space-y-5 rounded-2xl border border-solid border-dark bg-light
+       p-4 md:p-6 
       ${className}`}
     >
       <div className=" absolute top-3 -right-3 -z-10 w-[100%] h-[100%] rounded-2xl bg-dark " />
 
       {/* Project Type, Title, GitHub, Visit Website */}
-      <div className=" !mt-0 w-full flex sm:flex-col sm:pl-0 sm:space-y-2 items-center text-center justify-between pl-6">
-        <span className=" text-primary font-medium text-xl lg:text-lg md:text-base">
+      <div className=" w-full flex flex-col items-center space-y-3 text-center justify-between">
+        <h1 className=" text-primary font-medium text-base md:text-lg xl:text-xl">
           {type}
-        </span>
+        </h1>
 
         <Link
           href={link}
           target="_blank"
           className=" hover:underline underline-offset-2"
         >
-          <h2 className=" w-full text-4xl lg:text-2xl font-bold">{title}</h2>
+          <h2 className=" w-full text-2xl lg:text-4xl font-bold">{title}</h2>
         </Link>
         <div className="flex space-x-2">
           <Link
             href={github}
             target="_blank"
-            className=" w-10 md:w-6 flex items-center "
+            className="w-10 flex items-center "
           >
             <GitHubIcon />
           </Link>
@@ -162,8 +165,8 @@ const Project = ({
 
       <div>
         <p
-          className="overflow-y-auto
-  sm:scrollbar-thin sm:h-[300px] scrollbar-track-[#a4ac86] scrollbar-thumb-[#1b4332]"
+          className=" text-dark text-sm md:text-lg overflow-y-auto
+           scrollbar-thin max-h-[300px] scrollbar-track-[#a4ac86] scrollbar-thumb-[#1b4332]"
         >
           {summary}
         </p>
@@ -175,43 +178,34 @@ const Project = ({
 
 export default function Projects() {
   return (
-    <Layout className="flex-col dark:bg-dark !pt-16">
-      <AnimatedText
-        text="Always Imagining."
-        className=" mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
-      />
-      <StackTitle className=" mb-10">MERN Full-Stack Projects</StackTitle>
-      <div
-        className=" grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16
-       lg:gap-x-8 md:gap-y-24 sm:gap-x-0"
-      >
-        <FeaturedProject
-          className=" dark:bg-gradient-to-r 
+    <Layout className="flex-col !pt-16">
+      <AnimatedText text="Always Imagining" />
+
+      <StackTitle className=" my-10">MERN Full-Stack Projects</StackTitle>
+      <FeaturedProject
+        className=" dark:bg-gradient-to-r 
           from-purple-300
           to-pink-500
           via-red-400            
          animate-gradient-xy"
-          img={technotesmern}
-          title="MERN stack Employee TechNotes Application"
-          summary="In this employee techNotes MERN project, users can easily create, read, update, and delete tickets based on their assigned roles. These CRUD operations are effectively communicated to the powerful backend REST API using Redux Toolkit Query and NodeJS, which incorporates highly efficient caching capabilities to deliver a fast and efficient application experience by reducing API calls and component re-renders. The application is equipped with a modern security system that offers fully authenticated user access and highly specific authorization routes and functionality. This allows admin to perform a range of key functions, including assigning tickets to designated employees and deleting employees when necessary. These operations are carried out with the use of sophisticated JWT's (Jason web tokens), which are issued via backend REST API and sent to the client via access tokens and refresh tokens. To enhance the user experience further, custom hooks such as useAuth, pre-fetch, and persist login have been developed. These hooks enable users to stay logged in during refreshes, access the most up-to-date information, and dictate which roles and functions they can access based on their assigned roles. Additionally, the application is entirely written in Typescript, ensuring a more structured, error-free codebase."
-          type="Featured Project"
-          github="https://github.com/CodeOnTheWall/techNotes"
-          link="https://github.com/CodeOnTheWall/techNotes"
-        />
-      </div>
+        img={technotesmern}
+        title="MERN stack Employee TechNotes Application"
+        summary="In this employee TechNotes MERN project, users can easily create, read, update, and delete tickets based on their assigned roles. These CRUD operations are effectively communicated to the powerful backend REST API using Redux Toolkit Query and NodeJS, which incorporates highly efficient caching capabilities to deliver a fast and efficient application experience by reducing API calls and component re-renders. The application is equipped with a modern security system that offers fully authenticated user access and highly specific authorization routes and functionality. This allows admin to perform a range of key functions, including assigning tickets to designated employees and deleting employees when necessary. These operations are carried out with the use of sophisticated JWT's (Jason web tokens), which are issued via backend REST API and sent to the client via access tokens and refresh tokens. To enhance the user experience further, custom hooks such as useAuth, pre-fetch, and persist login have been developed. These hooks enable users to stay logged in during refreshes, access the most up-to-date information, and dictate which roles and functions they can access based on their assigned roles. Additionally, the application is entirely written in Typescript, ensuring a more structured, error-free codebase."
+        type="Featured Project"
+        github="https://github.com/CodeOnTheWall/techNotes"
+        link="https://github.com/CodeOnTheWall/techNotes"
+      />
 
-      <StackTitle className=" mt-20 mb-10">
+      <StackTitle className=" my-20 flex flex-col md:flex-row w-full justify-center">
         NextJS Full-Stack Projects
       </StackTitle>
-      <div
-        className=" grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16
-       lg:gap-x-8 md:gap-y-24 sm:gap-x-0"
-      >
+
+      <div className=" w-full flex flex-col lg:flex-row justify-evenly space-y-6 lg:space-y-0 ">
         <Project
           className=" dark:bg-gradient-to-r 
-          from-orange-300
+          from-orange-400
          to-orange-200
-          via-orange-50
+          via-orange-400
           animate-gradient-xy"
           img={AIPrompts}
           title="Promptzila"
@@ -223,9 +217,9 @@ export default function Projects() {
         />
         <Project
           className=" dark:bg-gradient-to-r 
-          from-orange-300
-         to-orange-200
-          via-orange-50
+          from-blue-400
+         to-blue-200
+          via-blue-400
           animate-gradient-xy"
           img={ImageGenerator}
           title="UnSplash Image Generator"
@@ -237,16 +231,16 @@ export default function Projects() {
         />
       </div>
 
-      <StackTitle className=" mt-20 mb-10">Client Projects</StackTitle>
-      <div
-        className=" grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16
-       lg:gap-x-8 md:gap-y-24 sm:gap-x-0"
-      >
+      <StackTitle className=" my-20 flex flex-col md:flex-row w-full justify-center">
+        Client Projects
+      </StackTitle>
+
+      <div className=" w-full flex flex-col lg:flex-row justify-evenly space-y-6 lg:space-y-0 ">
         <Project
           className=" dark:bg-gradient-to-r 
-        from-orange-300
-       to-orange-200
-        via-orange-50
+          from-orange-400
+          to-orange-200
+           via-orange-400
         animate-gradient-xy"
           img={nutritiva}
           title="Nutritiva"
@@ -258,9 +252,9 @@ export default function Projects() {
         />
         <Project
           className=" dark:bg-gradient-to-r 
-           from-blue-400
-           to-blue-300
-           via-blue-100
+          from-blue-400
+         to-blue-200
+          via-blue-400
            animate-gradient-xy"
           img={ascensionmarketing}
           title="Ascension Marketing"
@@ -272,18 +266,16 @@ export default function Projects() {
         />
       </div>
 
-      <StackTitle className=" mt-20 mb-10">
+      <StackTitle className=" my-20 flex flex-col md:flex-row w-full justify-center">
         Pure React Front-End Projects
       </StackTitle>
-      <div
-        className=" grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16
-       lg:gap-x-8 md:gap-y-24 sm:gap-x-0"
-      >
+
+      <div className=" w-full flex flex-col md:flex-row justify-evenly space-y-6 md:space-y-0 ">
         <Project
           className=" dark:bg-gradient-to-r 
-        from-orange-300
-       to-orange-200
-        via-orange-50
+          from-orange-300
+          to-orange-200
+           via-orange-50
         animate-gradient-xy"
           img={reactlogo}
           title="MERN stack Expense Tracker"
@@ -295,9 +287,9 @@ export default function Projects() {
         />
         <Project
           className=" dark:bg-gradient-to-r 
-           from-blue-400
-           to-blue-300
-           via-blue-100
+          from-blue-400
+          to-blue-200
+           via-blue-400
            animate-gradient-xy"
           img={reactlogo}
           title="Food Order App"

@@ -5,7 +5,7 @@ interface StackTitleProps {
 
 export default function StackTitle({ children, className }: StackTitleProps) {
   return (
-    <h1 className={`${className} font-bold md:text-2xl text-5xl`}>
+    <h1 className={`${className} font-bold text-2xl md:text-5xl`}>
       {children}
     </h1>
   );

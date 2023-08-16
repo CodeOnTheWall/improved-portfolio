@@ -56,13 +56,13 @@ export default function Education() {
     <div className="mt-20 md:mt-64">
       <AnimatedText text="Education" className=" my-10" />
 
-      <div ref={ref} className="w-[80%] mx-auto relative ">
+      <div ref={ref} className=" w-full md:w-[80%] mx-auto relative ">
         <motion.div
           style={{ scaleY: scrollYProgress }}
-          className=" absolute -left-2  top-1 w-[2px] md:w-[4px]  h-full bg-dark origin-top dark:bg-light
+          className="absolute -left-2  top-1 w-[2px] md:w-[4px]  h-full bg-dark origin-top dark:bg-light
            "
         />
-        <ul className="w-full flex flex-col items-center">
+        <ul className="flex flex-col items-center">
           {eduction.map((courses) => (
             <Details
               title={courses.title}
