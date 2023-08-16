@@ -18,16 +18,16 @@ export default function ContactMeForm() {
   };
   return (
     <>
-      <div className="flex md:flex-col md:space-y-2 items-center space-x-5 justify-center mb-5">
+      <div className="flex flex-col md:flex-row md:space-y-2 items-center space-x-5 justify-center">
         <EnvelopeIcon className="text-[#a3b18a] h-7 w-7 animate-pulse" />
         <p className=" font-bold dark:bg-gradient-to-r from-blue-400 via-purple-500 to-orange-500 dark:text-transparent bg-clip-text animate-gradient-xy">
-          bralencsundquist@hotmail.com
+          bralensundquist96@gmail.com
         </p>
       </div>
 
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className=" flex flex-col space-y-2 w-3/4 mx-auto "
+        className=" flex flex-col space-y-2 w-full md:w-3/4 mx-auto "
       >
         <input
           {...register("name")}

@@ -45,7 +45,7 @@ export default function AnimatedText({ text, className }: AnimatedTextProps) {
     >
       <motion.h1
         className={`${className} w-full text-dark dark:text-light font-bold capitalize 
-      text-3xl md:text-5xl xl:text-8xl`}
+      text-3xl md:text-5xl lg:text-6xl 2xl:text-8xl`}
         // telling the variants to use initial from quote, and animate from quote
         variants={quote}
         initial="initial"

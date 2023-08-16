@@ -1,5 +1,4 @@
 import Layout from "../[components]/Layout/Layout";
-import TransitionEffect from "../[components]/Motion/TransitionEffect";
 import AnimatedText from "../[components]/Motion/AnimatedText";
 import ContactMeForm from "./[components]/ContactMeForm";
 
@@ -14,11 +13,8 @@ export const metadata: Metadata = {
 
 export default function Contact() {
   return (
-    <Layout className="dark:bg-dark flex-col min-h-screen !pt-16">
-      <AnimatedText
-        text="Let's Talk"
-        className=" mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
-      />
+    <Layout className=" flex-col gap-y-6 ">
+      <AnimatedText text="Let's Talk" />
       <ContactMeForm />
     </Layout>
   );
