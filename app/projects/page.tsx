@@ -5,6 +5,7 @@ import ascensionmarketing from "../../public/projects/ascension-marketing.png";
 import reactlogo from "../../public/react-logo@3x.svg";
 import AIPrompts from "../../public/projects/AIPrompts.png";
 import ImageGenerator from "../../public/projects/ImageGenerator.png";
+import JJ from "../../public/projects/jj-serene-therapy.png";
 
 // Components
 import AnimatedText from "@/app/[components]/Motion/AnimatedText";
@@ -115,7 +116,7 @@ const Project = ({
 }: FeaturedProjectTypes) => {
   return (
     <article
-      className={` w-full lg:w-[40%] relative flex flex-col space-y-5 rounded-2xl border border-solid border-dark bg-light
+      className={` w-full col-span-12 md:col-span-6 lg:col-span-4 relative flex flex-col space-y-5 rounded-2xl border border-solid border-dark bg-light
        p-4 md:p-6 
       ${className}`}
     >
@@ -197,10 +198,10 @@ export default function Projects() {
       />
 
       <StackTitle className=" my-20 flex flex-col md:flex-row w-full justify-center">
-        NextJS Full-Stack Projects
+        NextJS Full-Stack Projects and Client Work
       </StackTitle>
 
-      <div className=" w-full flex flex-col lg:flex-row justify-evenly space-y-6 lg:space-y-0 ">
+      <div className=" w-full space-y-6 md:space-y-0 gap-y-6 gap-x-10  md:grid grid-cols-12   ">
         <Project
           className=" dark:bg-gradient-to-r 
           from-orange-400
@@ -229,13 +230,20 @@ export default function Projects() {
           link="https://image-generator-next-js-ecru.vercel.app/"
           website="Website"
         />
-      </div>
-
-      <StackTitle className=" my-20 flex flex-col md:flex-row w-full justify-center">
-        Client Projects
-      </StackTitle>
-
-      <div className=" w-full flex flex-col lg:flex-row justify-evenly space-y-6 lg:space-y-0 ">
+        <Project
+          className=" dark:bg-gradient-to-r 
+          from-blue-400
+          to-blue-200
+           via-blue-400
+        animate-gradient-xy"
+          img={JJ}
+          title="JJ Serene Therapy"
+          summary="Dynamic client project for an esteemed Osteopath! Leveraging cutting-edge tools, we've meticulously crafted an unparalleled user experience while streamlining development for maximum reliability. Seamlessly Empowering Clients: Our bespoke solution allows clients to effortlessly book appointments and submit inquiries, all through an intuitive interface. Using shadcn's type-safe forms, we ensure data accuracy and security. Pioneering Technology: Embracing innovation, we've harnessed the power of NextJS route handlers to channel all form data securely through our protected API endpoints. This ensures the highest level of confidentiality and integrity. Elevated Admin Capabilities: With Next-Auth integration, administrators enjoy secure access to a comprehensive dashboard. They can seamlessly manage and update data within shadcn's Data Table, empowering Admins to easily updated, delete, and add notes to clients file. Harmonizing Calendars: Our project harmoniously syncs with Calendly's calendar API, instantly populating connected calendars with appointments. This automation simplifies scheduling, enhancing user convenience. Crafted Visual Excellence: The application's aesthetics come to life through the artful blend of Tailwind CSS and the dynamic animations brought to us by the Framer Motion library. The result is not only functional but visually captivating."
+          type="Client Project"
+          github="https://github.com/CodeOnTheWall/JJ-Serene-Therapy-NextJS"
+          link="https://jj-serene-therapy-next-7procpcgt-codeonthewall.vercel.app/"
+          website="Website"
+        />
         <Project
           className=" dark:bg-gradient-to-r 
           from-orange-400
@@ -270,7 +278,7 @@ export default function Projects() {
         Pure React Front-End Projects
       </StackTitle>
 
-      <div className=" w-full flex flex-col md:flex-row justify-evenly space-y-6 md:space-y-0 ">
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <Project
           className=" dark:bg-gradient-to-r 
           from-orange-300
